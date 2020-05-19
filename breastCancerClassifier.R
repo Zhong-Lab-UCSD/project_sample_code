@@ -1,4 +1,10 @@
 library("tidyverse")
+# in case you cannot install tidyverse package, please uncomment the packages below
+# library("readr")
+# library("tibble")
+# library("dplyr")
+# library("tidyr")
+# library("ggplot2")
 library("magrittr")
 library("DESeq")
 library("e1071")
@@ -14,7 +20,7 @@ readcounts <- read_tsv("data/readcounts_96_nodup.tsv", col_names = T)
 # the column "recurStatus" shows the recurrence status of the patient, R = recurrence, N = non-recurrence 
 patient_info <- read_csv("data/patient_info.csv", col_names = T) # recurrence status file
 
-# generate sample_recurStatus dataframe with the same sampel order in tpm and reacounts
+# generate sample_recurStatus dataframe with the same sample order in tpm and reacounts
 sampel_recurStatus <- patient_info %>% arrange(match(sampleID, colnames(readcounts)[-1])) %>%
   select(sampleID, recurStatus)
 
@@ -38,7 +44,8 @@ rank_marker_gene <- res %>% filter(id %in% preselectedList) %>%
 # top 30, 60, 90, ... 720, 750
 geneNum <- seq(30, 750, 30) 
 
-# calculate average AUC of SVM based on each subset of biomarker genes
+# calculate average AUC of SVM based on each subset of biomarker genes 
+# need several minutes to complete the loop
 
 averageAUC <- rep(0, length(geneNum)) 
 for(i in 1:length(geneNum)){
@@ -153,4 +160,4 @@ ggplot(roc_data, aes(x = x, y = y, group = runtime, col = runtime)) + geom_line(
            x = 0.65, y=0.2, size = 3)
 
 ggsave('ROCplot.pdf', width = 4, height = 4)
-
+column_to_rownames()
