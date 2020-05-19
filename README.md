@@ -17,7 +17,7 @@ You'll be able to find the following files:
 
 
 ## Methods
-
+The main steps in the source code `breastCancerClassifier.R` includ: 
 - Rank pre-selected 750 biomarker genes by their differential expresssion (DESeq) p-values
 - Generate subsets of biomarker genes by their rank, top 30, 60, 90, ..., 720, 750
 - Use SVM to construct classifier and evaluate their performance by ROC and AUC
