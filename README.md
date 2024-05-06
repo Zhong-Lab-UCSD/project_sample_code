@@ -1,4 +1,4 @@
-# Course Project 2020: Breast cancer classifier based on SILVER-seq data
+# Course Project sample code: Breast cancer classifier based on SILVER-seq data
 
 We generated SILVER-seq data of breast cancer samples in the published work: Zhou, Z., Wu, Q., Yan, Z., Zheng, H., Chen, C.J., Liu, Y., Qi, Z., Calandrelli, R., Chen, Z., Chien, S. and Su, H.I., 2019. Extracellular RNA in a single droplet of human serum reflects physiologic and disease states. Proceedings of the National Academy of Sciences, 116(38), pp.19200-19208.). The whole dataset (raw and processed data) can be found in GEO database (GSE131512: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE131512)
 
