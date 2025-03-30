@@ -7,12 +7,14 @@ This repo shows an example of breast cancer recurrence classification practice w
 
 ## Data and source code
 
-You'll be able to find the following files:
+Data files:
 
 - `data/tpm_96_nodup.tsv`, TPM values for the 96 breast cancer samples, data for the samples are organized in columns (C1 to C96)
 - `data/readcounts_96_nodup.tsv`, read counts for the 96 breast cancer samples, data for the samples are organized in columns (C1 to C96)
 - `data/patient_info.csv`, meta info for all samples, the column recurStatus contains recurrence status of the corresponding donor, "R" for recurrence and "N" for non-recurrence.
 - `data/preselectedList`, the 750 pre-selected breast cancer biomarker genes in Ensembl gene ID
+
+Source code:
 - `breastCancerClassifier.R`, an R program for constructing a classifier for breast cancer recurrence status classification and reproducing Fig 5 C and D in our original paper based on the data in the `data` folder.
 
 
